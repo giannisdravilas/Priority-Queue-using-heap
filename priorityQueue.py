@@ -27,6 +27,10 @@ class PriorityQueue:
         self.count -= 1
         return item[0]
 
+    # Returns the size of Priority Queue
+    def size(self):
+        return self.count
+
     # A method isEmpty() returns True if the Priority Queue is Empty and False if it is not. This is found using
     # the length of the heap which depicts the Priority Queue.
 
@@ -45,7 +49,7 @@ class PriorityQueue:
             if i[0] == item:
                 if i[1] > priority:
                     i[1] = priority
-                    return
+                return
         self.heap.append([item, priority])
         self.count += 1
 
